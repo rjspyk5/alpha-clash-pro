@@ -25,7 +25,7 @@
                 Now</button>
         </section>
         <!-- Play-Ground Screen -->
-        <section class="play-ground  md:w-[600px] lg:w-[800px] mx-auto">
+        <section class="play-ground  md:w-[600px] lg:w-[800px] mx-auto hidden">
             <div class="playground h-screen flex flex-col items-center justify-center gap-5">
                 <!-- screen -->
                 <div class="w-full h-52 md:h-80 bg-[#ffffffB3] backdrop-blur-md border-gray-700 border-8 rounded-xl">
@@ -104,21 +104,29 @@
                 <div class="score flex space-x-1 items-center justify-center rounded-full px-6 py-3 bg-[#894189]">
                     <p>Life</p>
                     <img src="images/life.svg" alt="">
-                    <span>1</span>
+                    <span id="life">1</span>
                 </div>
                 <div class="score flex space-x-1 items-center justify-center rounded-full px-6 py-3 bg-[#360490]">
                     <p>Score</p>
                     <img src="images/score.svg" alt="">
-                    <span>1</span>
+                    <span id="score">1</span>
                 </div>
             </div>
             </div>
 
         </section>
         <!-- Score Screen -->
-        <section class="score"></section>
+        <section class="score h-screen flex items-center justify-center ">
+            <section
+                class="p-10 text-center space-y-4 bg-gradient-to-br border border-gray-500 rounded-lg from-[#ffffff18] to-[#989797b3]">
+                <h1 class="text-6xl font-bold ">Score : <span id="result">10</span></h1>
+                <button type="button"
+                    class="btn py-3 px-8 text-2xl font-semibold bg-green-500 rounded-lg text-white">Play
+                    Again</button>
+                <p class="text-xl">Practise will make you pro sir</p>
+            </section>
+        </section>
     </main>
-
 </body>
 
 </html>
