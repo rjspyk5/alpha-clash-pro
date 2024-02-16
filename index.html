@@ -13,19 +13,20 @@
 </head>
 
 <body>
-    <main
+    <main id="main"
         class="bg-[url(images/background.png)] min-h-screen bg-no-repeat  bg-cover bg-center poppins-regular text-white px-4">
         <!-- Home Screen -->
-        <section
-            class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10 hidden">
-            <h1 class="uppercase anton-regular text-8xl">ALPHABET CLASH</h1>
-            <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button type="button"
-                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-black font-bold focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-600 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 ">Play
-                Now</button>
-        </section>
+        <div id="homescreen" class="">
+            <section class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10">
+                <h1 class="uppercase anton-regular text-8xl">ALPHABET CLASH</h1>
+                <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button type="button"
+                    class="py-2.5 play px-5 me-2 mb-2 text-sm font-medium text-black font-bold focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-600 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 ">Play
+                    Now</button>
+            </section>
+        </div>
         <!-- Play-Ground Screen -->
-        <section class="play-ground  md:w-[600px] lg:w-[800px] mx-auto hidden">
+        <section id="playground" class="play-ground  md:w-[600px] lg:w-[800px] mx-auto hidden">
             <div class="playground h-screen flex flex-col items-center justify-center gap-5">
                 <!-- screen -->
                 <div class="w-full h-52 md:h-80 bg-[#ffffffB3] backdrop-blur-md border-gray-700 border-8 rounded-xl">
@@ -116,17 +117,19 @@
 
         </section>
         <!-- Score Screen -->
-        <section class="score h-screen flex items-center justify-center ">
+        <section id="score" class="score h-screen flex items-center justify-center hidden">
             <section
                 class="p-10 text-center space-y-4 bg-gradient-to-br border border-gray-500 rounded-lg from-[#ffffff18] to-[#989797b3]">
                 <h1 class="text-6xl font-bold ">Score : <span id="result">10</span></h1>
-                <button type="button"
-                    class="btn py-3 px-8 text-2xl font-semibold bg-green-500 rounded-lg text-white">Play
+                <button type="button" id="playAgain"
+                    class="btn play py-3 px-8 text-2xl font-semibold bg-green-500 rounded-lg text-white">Play
                     Again</button>
                 <p class="text-xl">Practise will make you pro sir</p>
             </section>
         </section>
     </main>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
