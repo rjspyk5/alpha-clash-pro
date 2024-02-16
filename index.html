@@ -15,14 +15,90 @@
 <body>
     <main
         class="bg-[url(images/background.png)] min-h-screen bg-no-repeat  bg-cover bg-center poppins-regular text-white">
-        <section class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10">
+        <!-- Home Screen -->
+        <section
+            class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10 hidden">
             <h1 class="uppercase anton-regular text-8xl">ALPHABET CLASH</h1>
             <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
             <button type="button"
                 class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-black font-bold focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-600 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 ">Play
                 Now</button>
         </section>
-        <section class="play-ground"></section>
+        <!-- Play-Ground Screen -->
+        <section class="play-ground">
+            <div class="playground h-screen flex flex-col items-center justify-center gap-5">
+                <div
+                    class="screen md:w-[600px] lg:w-[800px] h-[350px] bg-[#ffffffB3] backdrop-blur-md border-gray-700 border-8 rounded-xl">
+                    <p class="bg-gray-700 text-center mx-auto w-80 px-1 rounded-b-xl">Don't watch keyboard while playing
+                    </p>
+                </div>
+                <div class="keyborad space-y-3 w-[700px]">
+                    <div class="firstRow grid grid-cols-10 space-x-3  justify-center">
+                        <button type="button"
+                            class="btn  bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-1">q</button><button type="button"
+                            class="btn bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-2">w</button><button type="button"
+                            class="btn bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-3">e</button><button type="button"
+                            class="btn bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-4">r</button><button type="button"
+                            class="btn bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-5">t</button><button type="button"
+                            class="btn bg-white p-2 flex justify-center rounded-lg font-semibold hover:bg-opacity-65 items-center text-black"
+                            id="id-6">y</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-7">u</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-8">i</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-9">o</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-10">p</button>
+                    </div>
+                    <div class="firstRow grid grid-cols-9 space-x-3  justify-center mx-4"><button type="button"
+                            class="btn  bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-1">a</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-2">s</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-3">d</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-4">f</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-5">g</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-6">h</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-7">j</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-8">k</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-9">l</button></div>
+                    <div class="firstRow grid grid-cols-8 space-x-3  justify-center mx-7"><button type="button"
+                            class="btn  bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-1">z</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-2">x</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-3">c</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-4">v</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-5">b</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-6">n</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-7">m</button><button type="button"
+                            class="btn bg-white p-2 rounded-lg font-semibold flex justify-center hover:bg-opacity-65 items-center text-black"
+                            id="id-8">/</button></div>
+                </div>
+            </div>
+            <div class="score"></div>
+            </div>
+
+        </section>
+        <!-- Score Screen -->
         <section class="score"></section>
     </main>
 
