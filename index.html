@@ -14,7 +14,7 @@
 
 <body>
     <main id="main"
-        class="bg-[url(images/background.png)] min-h-screen bg-no-repeat  bg-cover bg-center poppins-regular text-white px-4">
+        class="bg-[url(images/background.png)] bg-no-repeat  bg-cover bg-center poppins-regular text-white px-4">
         <!-- Home Screen -->
         <div id="homescreen" class="">
             <section class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10">
@@ -26,8 +26,8 @@
             </section>
         </div>
         <!-- Play-Ground Screen -->
-        <section id="playground" class="play-ground  md:w-[600px] lg:w-[800px] mx-auto hidden">
-            <div class="playground h-screen flex flex-col items-center justify-center gap-5">
+        <section id="playground" class="play-ground h-screen  md:w-[600px] lg:w-[800px] mx-auto hidden">
+            <div class="playground pt-10 flex flex-col items-center justify-center gap-5">
                 <!-- screen -->
                 <div class="w-full h-52 md:h-80 bg-[#ffffffB3] backdrop-blur-md border-gray-700 border-8 rounded-xl">
                     <p class="bg-gray-700 text-center mx-auto w-80 px-1 rounded-b-xl">Don't watch keyboard while playing
@@ -103,14 +103,15 @@
                 </div>
             </div>
             <!-- score -->
-            <div class="score flex justify-between pb-4">
+            <div class="score flex justify-between pb-4 pt-4">
                 <div id="lifeContainer"
-                    class="score flex space-x-1 items-center justify-center rounded-full px-6 py-3 bg-green-500">
+                    class="score flex space-x-1 items-center justify-center rounded-full px-4 py-1 md:px-6 md:py-3 bg-green-500">
                     <p>Life</p>
                     <img src="images/life.svg" alt="">
                     <span id="life">3</span>
                 </div>
-                <div class="score flex space-x-1 items-center justify-center rounded-full px-6 py-3 bg-[#360490]">
+                <div
+                    class="score flex space-x-1 items-center justify-center rounded-full px-4 py-1 md:px-6 md:py-3 bg-[#360490]">
                     <p>Score</p>
                     <img src="images/score.svg" alt="">
                     <span id="score">0</span>
