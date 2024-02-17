@@ -58,6 +58,7 @@ class typingGame {
     this.playground.classList.add("hidden");
     this.gameOver.classList.remove("hidden");
     this.result.innerText = this.currentScore;
+    this.highlightText(this.charShoingPlace.innerText, "white", "black");
   }
   reset() {
     this.lifeField.innerText = 3;
