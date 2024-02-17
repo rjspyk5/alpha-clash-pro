@@ -24,6 +24,7 @@ class typingGame{
         }      
     }
     handleKeyboardClick(e){
+      
         this.lifeCount=this.lifeField.innerText
     if (e.target.innerText===this.charShoingPlace.innerText && this.lifeCount>0) {
         this.currentScore= parseInt(this.score.innerText);
@@ -60,10 +61,11 @@ class typingGame{
         this.score.innerText=0;
         this.lifeCount=3;
         this.currentScore=0;
+       
     }
 
     setRandomLetterOnScreen(){
-        const randomNumber=Math.random()*26;
+        const randomNumber=Math.random()*25;
         const randomIndex=Math.round(randomNumber);
         const allLetters="abcdefghijklmnopqrstuvwxyz"
         const randomLetter=allLetters.charAt(randomIndex);
