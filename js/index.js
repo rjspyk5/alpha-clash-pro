@@ -27,6 +27,7 @@ class typingGame {
   }
   handleKeyboardClick(e) {
     this.clickSound.play();
+    this.highlightText(e.key, "white", "black");
     if (e.key === this.charShoingPlace.innerText && this.lifeCount > 0) {
       this.currentScore += 1;
       this.score.innerText = this.currentScore;
@@ -48,9 +49,9 @@ class typingGame {
       }
     }
   }
-  highlightText(random) {
-    document.getElementById(random).style.backgroundColor = "blue";
-    document.getElementById(random).style.color = "white";
+  highlightText(random, bgColor, textColor) {
+    document.getElementById(random).style.backgroundColor = bgColor;
+    document.getElementById(random).style.color = textColor;
   }
 
   gameOverr() {
@@ -78,7 +79,7 @@ class typingGame {
     const allLetters = "abcdefghijklmnopqrstuvwxyz";
     const randomLetter = allLetters.charAt(randomIndex);
     this.charShoingPlace.innerText = randomLetter;
-    this.highlightText(randomLetter);
+    this.highlightText(randomLetter, "#fcc200", "white");
   }
 }
 
