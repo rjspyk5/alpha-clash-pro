@@ -17,6 +17,7 @@ class typingGame{
         this.play.addEventListener("click",this.handleClick.bind(this));     
         this.playAgain.addEventListener("click",this.handleClick.bind(this));  
         document.addEventListener("keyup",this.handleKeyboardClick.bind(this)) ;   
+        
     }
  
     handleClick(e){
@@ -26,11 +27,12 @@ class typingGame{
         this.reset();
     }
     handleKeyboardClick(e){
-    if (e.key===this.charShoingPlace.innerText && this.lifeCount>0) {
+        this.clickSound.play();
+    if (e.key===this.charShoingPlace.innerText   && this.lifeCount>0) {
         this.currentScore+=1;
         this.score.innerText=this.currentScore;
         this.setRandomLetterOnScreen();
-    }else if(e.key!=this.charShoingPlace && !this.playground.className.includes("hidden")){
+    }else if(e.key!=this.charShoingPlace  && !this.playground.className.includes("hidden")){
         this.lifeCount=this.lifeCount-1;
         this.lifeField.innerText=this.lifeCount;
         if (this.lifeCount==2) {
