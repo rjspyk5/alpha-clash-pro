@@ -55,18 +55,16 @@ class typingGame {
     document.getElementById(random).style.color = textColor;
   }
 
-  higestScoreSystem() {
-    this.higestScore.push(this.currentScore);
-    this.higestScore.sort();
-    this.setAndGetAtLocal(this.higestScore);
-  }
-
-  setAndGetAtLocal(score) {
+  setAndGetAtLocal() {
     this.prevData = localStorage.getItem("score")
       ? JSON.parse(localStorage.getItem("score"))
       : [];
-    console.log(this.prevData);
-    console.log(score);
+    this.prevData.push(this.currentScore);
+    this.prevData.sort((a, b) => a - b);
+    localStorage.setItem("score", JSON.stringify(this.prevData));
+    console.log(this.prevData?.length - 1);
+    console.log(this.prevData?.length - 2);
+    console.log(this.prevData?.length - 3);
   }
 
   gameOverr() {
@@ -74,7 +72,7 @@ class typingGame {
     this.gameOver.classList.remove("hidden");
     this.result.innerText = this.currentScore;
     this.highlightText(this.charShoingPlace.innerText, "white", "black");
-    this.higestScoreSystem();
+    this.setAndGetAtLocal();
   }
   reset() {
     this.lifeField.innerText = 3;
