@@ -14,6 +14,7 @@ class typingGame {
     this.gameOver = document.getElementById("gameover");
     this.currentScore = parseInt(this.score.innerText);
     this.lifeCount = this.lifeField.innerText;
+    this.higestScore = [];
     this.play.addEventListener("click", this.handleClick.bind(this));
     this.playAgain.addEventListener("click", this.handleClick.bind(this));
     document.addEventListener("keyup", this.handleKeyboardClick.bind(this));
@@ -54,11 +55,26 @@ class typingGame {
     document.getElementById(random).style.color = textColor;
   }
 
+  higestScoreSystem() {
+    this.higestScore.push(this.currentScore);
+    this.higestScore.sort();
+    this.setAndGetAtLocal(this.higestScore);
+  }
+
+  setAndGetAtLocal(score) {
+    this.prevData = localStorage.getItem("score")
+      ? JSON.parse(localStorage.getItem("score"))
+      : [];
+    console.log(this.prevData);
+    console.log(score);
+  }
+
   gameOverr() {
     this.playground.classList.add("hidden");
     this.gameOver.classList.remove("hidden");
     this.result.innerText = this.currentScore;
     this.highlightText(this.charShoingPlace.innerText, "white", "black");
+    this.higestScoreSystem();
   }
   reset() {
     this.lifeField.innerText = 3;
