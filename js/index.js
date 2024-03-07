@@ -91,7 +91,6 @@ class typingGame {
     removeClassEl.classList.add("hidden");
     this.playground.classList.remove("hidden");
   }
-
   setRandomLetterOnScreen() {
     const randomNumber = Math.random() * 25;
     const randomIndex = Math.round(randomNumber);
@@ -101,7 +100,6 @@ class typingGame {
     this.highlightText(randomLetter, "#fcc200", "white");
   }
 }
-
 const firstVersion = new typingGame("play");
 
 // const startSound=new Audio("/audio/Games of Thrones __ Ringtone 2015 __ Theme Music(MP3_160K)_1.mp3");
