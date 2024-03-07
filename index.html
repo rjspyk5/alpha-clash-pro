@@ -13,8 +13,15 @@
 </head>
 
 <body>
+    <div class="fixed text-white right-5 top-10"><label class="inline-flex items-center mb-5 cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div
+                class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+            </div>
+            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Light mode</span>
+        </label></div>
     <main id="main"
-        class="bg-[url(images/background.png)] bg-no-repeat  bg-cover bg-center poppins-regular text-white px-4">
+        class=" to-[#030631]  from-[black] bg-gradient-to-b bg-no-repeat  bg-cover bg-center poppins-regular text-white px-4">
         <!-- Home Screen -->
         <div id="homescreen" class="">
             <section class="home text-center flex flex-col justify-center items-center space-y-3 min-h-screen gap-10">
@@ -124,7 +131,7 @@
 
         <section id="gameover" class="score hidden h-screen flex-col flex items-center justify-center ">
             <div>
-                <h1 id="first"></h1>
+                <h1 class="py-10 text-3xl font-black text-green-500" id="first"></h1>
             </div>
             <section
                 class="p-10 text-center space-y-4 bg-gradient-to-br border border-gray-500 rounded-lg from-[#ffffff18] to-[#989797b3]">
