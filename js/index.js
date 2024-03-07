@@ -15,6 +15,7 @@ class typingGame {
     this.currentScore = parseInt(this.score.innerText);
     this.lifeCount = this.lifeField.innerText;
     this.higestScore = [];
+
     this.play.addEventListener("click", this.handleClick.bind(this));
     this.playAgain.addEventListener("click", this.handleClick.bind(this));
     document.addEventListener("keyup", this.handleKeyboardClick.bind(this));
@@ -62,9 +63,13 @@ class typingGame {
     this.prevData.push(this.currentScore);
     this.prevData.sort((a, b) => a - b);
     localStorage.setItem("score", JSON.stringify(this.prevData));
-    console.log(this.prevData?.length - 1);
-    console.log(this.prevData?.length - 2);
-    console.log(this.prevData?.length - 3);
+
+    for (let i = 0; i < this.prevData.length; i++) {
+      if (i === 3) {
+        break;
+      }
+      console.log(this.prevData[i]);
+    }
   }
 
   gameOverr() {
