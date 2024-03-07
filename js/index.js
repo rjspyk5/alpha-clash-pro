@@ -63,13 +63,12 @@ class typingGame {
     this.prevData.push(this.currentScore);
     this.prevData.sort((a, b) => a - b);
     localStorage.setItem("score", JSON.stringify(this.prevData));
-
-    for (let i = 0; i < this.prevData.length; i++) {
-      if (i === 3) {
-        break;
-      }
-      console.log(this.prevData[i]);
-    }
+    const first = document.getElementById("first");
+    this.prevData.length - 1
+      ? (first.innerHTML = `Highest score is : ${
+          this.prevData[this.prevData.length - 1]
+        }`)
+      : "";
   }
 
   gameOverr() {
